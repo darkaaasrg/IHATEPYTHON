@@ -6,10 +6,7 @@ from app.domain import User, Product, CarouselItem
 from app.forms import LoginForm, AdminForm, EditAdminForm, ProductForm, CarouselItemForm
 from app.utils import save_picture, superuser_required
 
-# Створюємо Blueprint з префіксом /admin
 admin = Blueprint('admin', __name__, url_prefix='/admin')
-
-# --- АВТЕНТИФІКАЦІЯ ---
 
 @admin.route("/login", methods=["GET", "POST"])
 def login():
